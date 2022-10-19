@@ -15,3 +15,15 @@ function findUserByUsername(arr, userName){
         return found_user
     }
   }
+
+  // ------------
+
+  function extractValue(arr, key){
+    return arr.reduce(function(accum, next, []){
+        return [].push(accum[key]).push(next)
+    })
+  }
+
+  const arr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}]
+
+  console.log(extractValue(arr, 'name'))
